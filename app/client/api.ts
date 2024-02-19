@@ -2,6 +2,8 @@ import { getClientConfig } from "../config/client";
 import {
   ACCESS_CODE_PREFIX,
   Azure,
+  GPT3,
+  GPT4,
   ModelProvider,
   ServiceProvider,
 } from "../constant";
@@ -11,7 +13,7 @@ import { GeminiProApi } from "./platforms/google";
 export const ROLES = ["system", "user", "assistant"] as const;
 export type MessageRole = (typeof ROLES)[number];
 
-export const Models = ["gpt-3.5-turbo", "gpt-4"] as const;
+export const Models = [GPT3, GPT4] as const;
 export type ChatModel = ModelType;
 
 export interface RequestMessage {

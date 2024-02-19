@@ -1,3 +1,4 @@
+import { GPT3, GPT4 } from "../constant";
 import { BuiltinMask } from "./typing";
 
 export const EN_MASKS: BuiltinMask[] = [
@@ -14,7 +15,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: GPT4,
       temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -60,7 +61,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: GPT4,
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -86,7 +87,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-3.5-turbo",
+      model: GPT3,
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
@@ -118,7 +119,7 @@ export const EN_MASKS: BuiltinMask[] = [
       },
     ],
     modelConfig: {
-      model: "gpt-4",
+      model: GPT4,
       temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
