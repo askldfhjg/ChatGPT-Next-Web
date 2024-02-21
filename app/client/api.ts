@@ -16,9 +16,17 @@ export type MessageRole = (typeof ROLES)[number];
 export const Models = [GPT3, GPT4] as const;
 export type ChatModel = ModelType;
 
+export interface MultimodalContent {
+  type: "text" | "image_url";
+  text?: string;
+  image_url?: {
+    url: string;
+  };
+}
+
 export interface RequestMessage {
   role: MessageRole;
-  content: string;
+  content: string | MultimodalContent[];
 }
 
 export interface LLMConfig {
